@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Interactible_Object : MonoBehaviour
 {
@@ -9,10 +10,17 @@ public class Interactible_Object : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
+    [Header("Clue Settings")]
+    public string glyph;
+    public string translation;
+
+    [Header("Notification Panel")]
+    public GameObject notifPanel;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        notifPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,7 +43,10 @@ public class Interactible_Object : MonoBehaviour
 
     void OnLeftClick()
     {
+        notifPanel.SetActive(true);
 
+        var notifScript = notifPanel.GetComponent<notifPanelBehaviour>();
+        notifScript.GetClue(glyph, translation);
     }
 
     void OnRightClick()
