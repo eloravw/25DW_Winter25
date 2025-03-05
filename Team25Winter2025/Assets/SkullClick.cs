@@ -26,7 +26,6 @@ public class SkullClick : MonoBehaviour
                 leftClickedObject = frontmostRaycastHit.collider.gameObject;
 
                 manager.OnLeftClick(leftClickedObject);
-                Debug.Log(leftClickedObject);
             }
 
         }
@@ -39,7 +38,7 @@ public class SkullClick : MonoBehaviour
             {
                 rightClickedObject = frontmostRaycastHit.collider.gameObject;
 
-                rightClickedObject.SendMessageUpwards("OnRightClick", gameObject, SendMessageOptions.DontRequireReceiver);
+                manager.OnLeftClick(leftClickedObject);
             }
         }
     }
