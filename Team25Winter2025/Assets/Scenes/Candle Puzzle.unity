@@ -1477,6 +1477,15 @@ MonoBehaviour:
   bottomLeftLine: {fileID: 1344047510}
   bottomRightLine: {fileID: 1330388682}
   topRightLine: {fileID: 1227181001}
+  innaccessibleCandles:
+  - {fileID: 809098528}
+  - {fileID: 1833222631}
+  - {fileID: 531382179}
+  - {fileID: 1361292146}
+  - {fileID: 797815678}
+  - {fileID: 1686925373}
+  - {fileID: 797755346}
+  - {fileID: 643312017}
 --- !u!1 &1131329215
 GameObject:
   m_ObjectHideFlags: 0

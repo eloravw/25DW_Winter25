@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -25,6 +26,12 @@ public class DiamondCandlePuzzle : MonoBehaviour
     //current sequence position (5 candles total)
     int sequence = 0;
 
+    //List of candles that are never pressed during the diamond pattern
+    public List<GameObject> innaccessibleCandles;
+
+    //is this pattern complete?
+    bool completeDiamond = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +46,24 @@ public class DiamondCandlePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < innaccessibleCandles.Count; i++)
+        {
+            if (innaccessibleCandles[i].GetComponent<CandleFunctionality>().clicked)
+            {
+                Reset();
+            }
+        }
+
         //first candle pressed (top candle)
         if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 0)
         {
             topCandle.GetComponent<SpriteRenderer>().color = Color.magenta;
             sequence += 1;
+        }
+        //wrong press
+        if (Input.GetMouseButtonDown(0) && bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence == 1)
+        {
+            Reset();
         }
 
         //second candle pressed
@@ -97,6 +117,14 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 topRightLine.SetActive(true);
+                completeDiamond = true;
+            }
+
+            //wrong press
+            if (Input.GetMouseButtonDown(0) && ((bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence != 3) || (rightCandle.GetComponent<CandleFunctionality>().clicked && sequence != 4) 
+                || (topCandle.GetComponent<CandleFunctionality>().clicked && sequence != 5)))
+            {
+                Reset();
             }
         }
 
@@ -128,9 +156,37 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 topLeftLine.SetActive(true);
+                completeDiamond = true;
+            }
+
+            //wrong press
+            if (Input.GetMouseButtonDown(0) && ((bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence != 3) || (leftCandle.GetComponent<CandleFunctionality>().clicked && sequence != 4)
+                || (topCandle.GetComponent<CandleFunctionality>().clicked && sequence != 5)))
+            {
+                Reset();
             }
         }
 
+    }
+
+    private void Reset()
+    {
+        if (!completeDiamond) {
+            topLeftLine.SetActive(false);
+            bottomLeftLine.SetActive(false);
+            bottomRightLine.SetActive(false);
+            topRightLine.SetActive(false);
+
+            topCandle.GetComponent<SpriteRenderer>().color = Color.white;
+            leftCandle.GetComponent<SpriteRenderer>().color = Color.white;
+            bottomCandle.GetComponent<SpriteRenderer>().color = Color.white;
+            rightCandle.GetComponent<SpriteRenderer>().color = Color.white;
+
+            sequence = 0;
+
+            pathOne = false;
+            pathTwo = false;
+        }
     }
 
 }
