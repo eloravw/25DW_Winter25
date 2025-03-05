@@ -25,20 +25,7 @@ public class SkullClick : MonoBehaviour
             {
                 leftClickedObject = frontmostRaycastHit.collider.gameObject;
 
-                manager.OnLeftClick(leftClickedObject);
-            }
-
-        }
-
-        else if (Input.GetMouseButtonDown(1))
-        {
-            frontmostRaycastHit = GetFrontmostRaycastHit();
-
-            if (frontmostRaycastHit)
-            {
-                rightClickedObject = frontmostRaycastHit.collider.gameObject;
-
-                manager.OnLeftClick(leftClickedObject);
+                if (leftClickedObject.CompareTag("Skull")) manager.OnLeftClick(leftClickedObject);
             }
         }
     }
