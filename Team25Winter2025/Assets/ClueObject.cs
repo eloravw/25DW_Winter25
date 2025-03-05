@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Interactible_Object : MonoBehaviour
+public class ClueObject : MonoBehaviour
 {
 
     public Texture2D cursorTexture;
