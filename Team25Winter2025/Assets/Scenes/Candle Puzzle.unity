@@ -131,6 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 100769419}
+  - component: {fileID: 100769420}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -155,6 +156,40 @@ Transform:
   - {fileID: 1840638822}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100769420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100769418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d0d9c8ccc77134495b7c622a3e943a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candles:
+  - {fileID: 809098528}
+  - {fileID: 531382179}
+  - {fileID: 1833222631}
+  - {fileID: 1361292146}
+  - {fileID: 797815678}
+  - {fileID: 1686925373}
+  - {fileID: 643312017}
+  - {fileID: 797755346}
+  lines:
+  - {fileID: 1505451037}
+  - {fileID: 1533810530}
+  - {fileID: 983769987}
+  - {fileID: 377732872}
+  - {fileID: 2029029559}
+  - {fileID: 2066249728}
+  - {fileID: 1840025676}
+  innaccessibleCandles:
+  - {fileID: 1131329215}
+  - {fileID: 605882124}
+  - {fileID: 588748491}
+  - {fileID: 1793883667}
 --- !u!1 &377732872
 GameObject:
   m_ObjectHideFlags: 0

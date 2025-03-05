@@ -26,8 +26,8 @@ public class DiamondCandlePuzzle : MonoBehaviour
     //current sequence position (5 candles total)
     int sequence = 0;
 
-    //List of candles that are never pressed during the diamond pattern
-    public List<GameObject> innaccessibleCandles;
+    //holds the next candle in the sequence
+    GameObject nextCandle;
 
     //is this pattern complete?
     bool completeDiamond = false;
@@ -46,19 +46,13 @@ public class DiamondCandlePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < innaccessibleCandles.Count; i++)
-        {
-            if (innaccessibleCandles[i].GetComponent<CandleFunctionality>().clicked)
-            {
-                Reset();
-            }
-        }
 
         //first candle pressed (top candle)
         if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 0)
         {
             topCandle.GetComponent<SpriteRenderer>().color = Color.magenta;
             sequence += 1;
+            nextCandle = topCandle;
         }
         //wrong press
         if (Input.GetMouseButtonDown(0) && bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence == 1)
@@ -76,6 +70,8 @@ public class DiamondCandlePuzzle : MonoBehaviour
             pathTwo = false;
 
             topLeftLine.SetActive(true);
+
+            nextCandle = leftCandle;
         }
 
         //right candle
@@ -87,6 +83,8 @@ public class DiamondCandlePuzzle : MonoBehaviour
             pathOne = false;
 
             topRightLine.SetActive(true);
+
+            nextCandle = rightCandle;
         }
 
         //_______________________
@@ -101,6 +99,8 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 bottomLeftLine.SetActive(true);
+
+                nextCandle = bottomCandle;
             }
 
             if (rightCandle.GetComponent<CandleFunctionality>().clicked && sequence == 3)
@@ -109,6 +109,8 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 bottomRightLine.SetActive(true);
+
+                nextCandle = rightCandle;
             }
 
             if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 4)
@@ -118,14 +120,10 @@ public class DiamondCandlePuzzle : MonoBehaviour
 
                 topRightLine.SetActive(true);
                 completeDiamond = true;
+
+                nextCandle = topCandle;
             }
 
-            //wrong press
-            if (Input.GetMouseButtonDown(0) && ((bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence != 3) || (rightCandle.GetComponent<CandleFunctionality>().clicked && sequence != 4) 
-                || (topCandle.GetComponent<CandleFunctionality>().clicked && sequence != 5)))
-            {
-                Reset();
-            }
         }
 
         //______________________
@@ -140,6 +138,8 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 bottomRightLine.SetActive(true);
+
+                nextCandle = bottomCandle;
             }
 
             if (leftCandle.GetComponent<CandleFunctionality>().clicked && sequence == 3)
@@ -148,6 +148,8 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 bottomLeftLine.SetActive(true);
+
+                nextCandle = leftCandle;
             }
 
             if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 4)
@@ -157,16 +159,16 @@ public class DiamondCandlePuzzle : MonoBehaviour
 
                 topLeftLine.SetActive(true);
                 completeDiamond = true;
+
+                nextCandle = topCandle;
             }
 
-            //wrong press
-            if (Input.GetMouseButtonDown(0) && ((bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence != 3) || (leftCandle.GetComponent<CandleFunctionality>().clicked && sequence != 4)
-                || (topCandle.GetComponent<CandleFunctionality>().clicked && sequence != 5)))
-            {
-                Reset();
-            }
         }
-
+        //wrong press
+        if (Input.GetMouseButtonDown(0) && nextCandle.GetComponent<CandleFunctionality>().clicked == false)
+        {
+            Reset();
+        }
     }
 
     private void Reset()
@@ -177,7 +179,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
             bottomRightLine.SetActive(false);
             topRightLine.SetActive(false);
 
-            topCandle.GetComponent<SpriteRenderer>().color = Color.white;
+            topCandle.GetComponent<SpriteRenderer>().color = new Color(150, 255, 255, 255);
             leftCandle.GetComponent<SpriteRenderer>().color = Color.white;
             bottomCandle.GetComponent<SpriteRenderer>().color = Color.white;
             rightCandle.GetComponent<SpriteRenderer>().color = Color.white;
