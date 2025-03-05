@@ -889,6 +889,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2018434217064317185, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
       propertyPath: notifPanel
       value: 

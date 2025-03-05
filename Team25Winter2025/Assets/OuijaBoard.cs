@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class OuijaBoard : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class OuijaBoard : MonoBehaviour
 
     [Header("Planchet")]
     public GameObject planchet;
+    public float waitTime;
 
     [Header("Input")]
     public TextMeshProUGUI input;
@@ -25,17 +27,19 @@ public class OuijaBoard : MonoBehaviour
     'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
     private string returnWord;
     private int letterIndex;
+    private planchetMovement planchetScript;
+    private IEnumerator coroutine;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        planchetScript = planchet.GetComponent<planchetMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void newQuery(string enteredWord)
@@ -45,7 +49,7 @@ public class OuijaBoard : MonoBehaviour
         string query = enteredWord.Trim();
         if (query.Length > 0)
         {
-            Debug.Log("Searching for " + enteredWord);
+            //Debug.Log("Searching for " + enteredWord);
         }
 
         for (int i = 0; i < validQueries.Length; i++)
@@ -53,8 +57,8 @@ public class OuijaBoard : MonoBehaviour
             if (query.Equals(validQueries[i], System.StringComparison.OrdinalIgnoreCase))
             {
                 returnWord = translations[i];
-                Debug.Log(returnWord);
-                showResult(returnWord);
+                //Debug.Log(returnWord);
+                StartCoroutine (showResult(returnWord));
                 return;
             }
 
@@ -73,17 +77,17 @@ public class OuijaBoard : MonoBehaviour
     }
 
 
-    void showResult(string result)
+    private IEnumerator showResult(string result)
     {
         char[] letters = new char[result.Length];
-        
+
         for (int j = 0; j < result.Length; j++)
         {
             char newLetter = result[j];
             letters[j] = newLetter;
 
-            Debug.Log(newLetter);
-            
+            //Debug.Log(newLetter);
+
         }
 
         for (int k = 0; k < letters.Length; k++)
@@ -94,13 +98,18 @@ public class OuijaBoard : MonoBehaviour
                 if (letters[k].Equals(alphabet[l]))
                 {
                     letterIndex = l;
-                    Debug.Log(letter_loc[letterIndex]);
-                }
+                    //Debug.Log(letter_loc[letterIndex]);
+                    GameObject currentTarget = letter_loc[letterIndex];
 
+                    planchetScript.MoveToTarget(currentTarget);
+                    yield return new WaitForSeconds(waitTime);
+
+                }
+                
 
             }
         }
 
-
+        planchetScript.ReturnToCenter();
     }
 }
