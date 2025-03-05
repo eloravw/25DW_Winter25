@@ -13,9 +13,6 @@ public class OuijaRoomManager : MonoBehaviour
     public GameObject candleP2;
     public GameObject cloakP3;
 
-    private bool lampCollected = false;
-    private bool candleCollected = false;
-    private bool cloakCollected = false;
 
     private void Start()
     {
@@ -26,7 +23,22 @@ public class OuijaRoomManager : MonoBehaviour
 
     private void Update()
     {
-       if (lampCollected && candleCollected && cloakCollected)
+        if (GameManager.ouijaLampCollected)
+        {
+            lampP1.SetActive(false);
+        }
+
+        if (GameManager.ouijaCandleCollected)
+        {
+            candleP2.SetActive(false);
+        }
+
+        if (GameManager.ouijaCloakCollected)
+        {
+            cloakP3.SetActive(false);
+        }
+
+        if (GameManager.ouijaCandleCollected && GameManager.ouijaCloakCollected && GameManager.ouijaLampCollected)
         {
             PuzzleComplete();
         }
@@ -38,32 +50,26 @@ public class OuijaRoomManager : MonoBehaviour
 
         if (objectID == 1)
         {
-            lampCollected = true;
-            lampP1.SetActive(false);
+            GameManager.ouijaLampCollected = true;
         }
 
         if (objectID == 2)
         {
-            candleCollected = true;
-            candleP2.SetActive(false);
+            GameManager.ouijaCandleCollected = true;
         }
 
         if (objectID == 3)
         {
-            cloakCollected = true;
-            cloakP3.SetActive(false);
+            GameManager.ouijaCloakCollected = true;
         }
+
+        
+
 
     }
 
     void PuzzleComplete()
     {
-        Debug.Log("Puzzle Complete");
-
-        lampCollected = false;
-        cloakCollected = false;
-        candleCollected = false;
-
         ouijaBoardItem.SetActive(true);
     }
 
