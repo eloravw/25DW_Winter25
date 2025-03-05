@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &219621913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8281467038334168573, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+  m_PrefabInstance: {fileID: 1915437205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &525954553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,6 +425,57 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1197671486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197671488}
+  - component: {fileID: 1197671487}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1197671487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197671486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e0ca5079469354687ca291924de4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clueE: {fileID: 1376427377}
+  clueB: {fileID: 219621913}
+--- !u!4 &1197671488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197671486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.1970634, y: 1.5370804, z: -0.07598459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376427377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8281467038334168573, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+  m_PrefabInstance: {fileID: 1627262428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1627262428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -472,6 +528,14 @@ PrefabInstance:
       propertyPath: glyph
       value: E
       objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: clueID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1197671486}
     - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
       propertyPath: notifPanel
       value: 
@@ -541,6 +605,14 @@ PrefabInstance:
       propertyPath: glyph
       value: B
       objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: clueID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1197671486}
     - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
       propertyPath: notifPanel
       value: 
@@ -665,3 +737,4 @@ SceneRoots:
   - {fileID: 1915437205}
   - {fileID: 789389247}
   - {fileID: 562808007}
+  - {fileID: 1197671488}
