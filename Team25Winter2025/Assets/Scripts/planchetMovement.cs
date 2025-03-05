@@ -29,6 +29,7 @@ public class planchetMovement : MonoBehaviour
 
     public void ReturnToCenter()
     {
-        targetDirection = Vector2.zero;
+        lerpTime = 0;
+        targetDirection = new Vector2(0, -5);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteClicker : MonoBehaviour
+public class ClueClicker : MonoBehaviour
 {
 
     private GameObject leftClickedObject;
