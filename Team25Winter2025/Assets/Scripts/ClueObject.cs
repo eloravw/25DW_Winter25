@@ -13,6 +13,8 @@ public class ClueObject : MonoBehaviour
     [Header("Clue Settings")]
     public string glyph;
     public string translation;
+    public int clueID;
+    public GameObject manager;
 
     [Header("Notification Panel")]
     public GameObject notifPanel;
@@ -47,6 +49,9 @@ public class ClueObject : MonoBehaviour
 
         var notifScript = notifPanel.GetComponent<notifPanelBehaviour>();
         notifScript.GetClue(glyph, translation);
+
+        manager.SendMessage("ClueCollected", clueID, SendMessageOptions.DontRequireReceiver);
+
     }
 
     void OnRightClick()
