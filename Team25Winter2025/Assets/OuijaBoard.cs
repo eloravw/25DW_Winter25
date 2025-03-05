@@ -12,32 +12,7 @@ public class OuijaBoard : MonoBehaviour
     public string[] translations;
 
     [Header("Letter Locations")]
-    public GameObject a_loc;
-    public GameObject b_loc;
-    public GameObject c_loc;
-    public GameObject d_loc;
-    public GameObject e_loc;
-    public GameObject f_loc;
-    public GameObject g_loc;
-    public GameObject h_loc;
-    public GameObject i_loc;
-    public GameObject j_loc;
-    public GameObject k_loc;
-    public GameObject l_loc;
-    public GameObject m_loc;
-    public GameObject n_loc;
-    public GameObject o_loc;
-    public GameObject p_loc;
-    public GameObject q_loc;
-    public GameObject r_loc;
-    public GameObject s_loc;
-    public GameObject t_loc;
-    public GameObject u_loc;
-    public GameObject v_loc;
-    public GameObject w_loc;
-    public GameObject x_loc;
-    public GameObject y_loc;
-    public GameObject z_loc;
+    public GameObject[] letter_loc;
 
     [Header("Planchet")]
     public GameObject planchet;
@@ -45,7 +20,11 @@ public class OuijaBoard : MonoBehaviour
     [Header("Input")]
     public TextMeshProUGUI input;
 
+
+    private char[] alphabet = {'a','b','c','d','e','f','g','h','i','j','k', 'l', 'm', 'n', 'o', 'p', 'q',
+    'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
     private string returnWord;
+    private int letterIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -75,10 +54,10 @@ public class OuijaBoard : MonoBehaviour
             {
                 returnWord = translations[i];
                 Debug.Log(returnWord);
+                showResult(returnWord);
                 return;
             }
 
-            i++;
         }
 
         if (returnWord == "")
@@ -91,5 +70,37 @@ public class OuijaBoard : MonoBehaviour
     void noResult()
     {
         Debug.Log("That is not a valid entry.");
+    }
+
+
+    void showResult(string result)
+    {
+        char[] letters = new char[result.Length];
+        
+        for (int j = 0; j < result.Length; j++)
+        {
+            char newLetter = result[j];
+            letters[j] = newLetter;
+
+            Debug.Log(newLetter);
+            
+        }
+
+        for (int k = 0; k < letters.Length; k++)
+        {
+            for (int l = 0; l < alphabet.Length; l++)
+            {
+
+                if (letters[k].Equals(alphabet[l]))
+                {
+                    letterIndex = l;
+                    Debug.Log(letter_loc[letterIndex]);
+                }
+
+
+            }
+        }
+
+
     }
 }
