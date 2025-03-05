@@ -1417,7 +1417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6345734908389446326, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: sceneName
-      value: StartingScene
+      value: SeanceRoom2
       objectReference: {fileID: 0}
     - target: {fileID: 5236967661508385750, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: m_Name
@@ -1425,11 +1425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755410706165140313, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.26
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 6755410706165140313, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 4.39
       objectReference: {fileID: 0}
     - target: {fileID: 6755410706165140313, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: m_LocalPosition.z
