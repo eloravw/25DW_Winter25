@@ -40,8 +40,7 @@ public class PuzzleObject : MonoBehaviour
     void OnLeftClick()
     {
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
-        var managerScript = manager.GetComponent<OuijaRoomManager>();
-        managerScript.PuzzleObjCollected(puzzleID);
+        manager.SendMessage("PuzzleObjCollected", puzzleID, SendMessageOptions.DontRequireReceiver);
 
     }
 
