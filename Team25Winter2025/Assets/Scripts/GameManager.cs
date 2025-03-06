@@ -12,6 +12,12 @@ public static class GameManager
     //Music Room Puzzle Solved
     public static bool solvedMusicRoom { get; set; }
 
+    //Candle Puzzle Solved
+    public static bool solvedCandlePuzzle { get; set; }
+
+    //Painting Puzzle Solved
+    public static bool solvedPaintingPuzzle { get; set; }
+
     //Clues
 
     //Big Translation Clue
