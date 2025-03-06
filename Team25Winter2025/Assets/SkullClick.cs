@@ -25,7 +25,11 @@ public class SkullClick : MonoBehaviour
             {
                 leftClickedObject = frontmostRaycastHit.collider.gameObject;
 
-                if (leftClickedObject.CompareTag("Skull")) manager.OnLeftClick(leftClickedObject);
+                if (leftClickedObject.CompareTag("Skull"))
+                {
+                    manager.OnLeftClick(leftClickedObject);
+                    leftClickedObject.SendMessage("Shake");
+                }
             }
         }
     }

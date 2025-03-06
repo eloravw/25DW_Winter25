@@ -427,14 +427,15 @@ PrefabInstance:
       propertyPath: m_LayerOverridePriority
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8778977437875452850, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: offset
+      value: 0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 333909216}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
 --- !u!4 &333909212 stripped
 Transform:
@@ -446,21 +447,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
   m_PrefabInstance: {fileID: 333909211}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &333909216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333909213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99db1e958d72b974bbb1ee87af1a6d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!1001 &366688946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -718,14 +704,15 @@ PrefabInstance:
       propertyPath: m_LayerOverridePriority
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8778977437875452850, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: offset
+      value: 0.19
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 673865636}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
 --- !u!4 &673865632 stripped
 Transform:
@@ -737,21 +724,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
   m_PrefabInstance: {fileID: 673865631}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &673865636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673865633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99db1e958d72b974bbb1ee87af1a6d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!1 &773035764
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +865,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 871d24df78c48f2499a6e3a211438f31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -928,6 +900,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1679118205}
     m_Modifications:
+    - target: {fileID: 606908000833905771, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 606908000833905771, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 606908000833905771, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2761592678016881085, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1020,14 +1004,15 @@ PrefabInstance:
       propertyPath: m_LayerOverridePriority
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8778977437875452850, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: offset
+      value: -0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1056294861}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
 --- !u!4 &1056294857 stripped
 Transform:
@@ -1039,21 +1024,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
   m_PrefabInstance: {fileID: 1056294856}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1056294861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056294858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99db1e958d72b974bbb1ee87af1a6d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!1 &1146049609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,14 +1226,15 @@ PrefabInstance:
       propertyPath: m_LayerOverridePriority
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8778977437875452850, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: offset
+      value: -0.31
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1146728064}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
 --- !u!4 &1146728060 stripped
 Transform:
@@ -1275,21 +1246,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
   m_PrefabInstance: {fileID: 1146728059}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1146728064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146728061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99db1e958d72b974bbb1ee87af1a6d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!1 &1189240474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,14 +1551,15 @@ PrefabInstance:
       propertyPath: m_LayerOverridePriority
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8778977437875452850, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: offset
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1635414811}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
 --- !u!4 &1635414807 stripped
 Transform:
@@ -1614,21 +1571,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
   m_PrefabInstance: {fileID: 1635414806}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1635414811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635414808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99db1e958d72b974bbb1ee87af1a6d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!1 &1679118204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1581,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1679118205}
   - component: {fileID: 1679118207}
-  - component: {fileID: 1679118206}
   m_Layer: 0
   m_Name: Skull Manager
   m_TagString: Untagged
@@ -1671,102 +1612,6 @@ Transform:
   - {fileID: 1189240475}
   m_Father: {fileID: 212201924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1679118206
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679118204}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &1679118207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,13 +1633,6 @@ MonoBehaviour:
   dSkull: {fileID: 333909213}
   skullOrder:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  skullSounds:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2150,14 +1988,15 @@ PrefabInstance:
       propertyPath: m_LayerOverridePriority
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8778977437875452850, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
+      propertyPath: offset
+      value: -0.28
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1878255247}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
 --- !u!4 &1878255243 stripped
 Transform:
@@ -2169,21 +2008,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5241170399980125505, guid: a71d722f788ff0347a9291be7ca63fa3, type: 3}
   m_PrefabInstance: {fileID: 1878255242}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1878255247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878255244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99db1e958d72b974bbb1ee87af1a6d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!1 &1886392935 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8281467038334168573, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
