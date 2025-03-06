@@ -1,3 +1,4 @@
+using NodeCanvas.Tasks.Actions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,11 @@ public class OuijaRoomManager : MonoBehaviour
 
     [Header("Puzzle Items")]
     public GameObject lampP1;
-    public GameObject candleP2;
-    public GameObject cloakP3;
+
+    [Header("Clue Items")]
+    public GameObject ClueO;
+    public GameObject ClueI;
+    public GameObject ClueC;
 
 
     private void Start()
@@ -28,20 +32,26 @@ public class OuijaRoomManager : MonoBehaviour
             lampP1.SetActive(false);
         }
 
-        if (GameManager.ouijaCandleCollected)
-        {
-            candleP2.SetActive(false);
-        }
-
-        if (GameManager.ouijaCloakCollected)
-        {
-            cloakP3.SetActive(false);
-        }
-
         if (GameManager.ouijaCandleCollected && GameManager.ouijaCloakCollected && GameManager.ouijaLampCollected)
         {
             PuzzleComplete();
         }
+
+        if (GameManager.clueO)
+        {
+            ClueO.SetActive(false);
+        }
+
+        if (GameManager.clueI)
+        {
+            ClueI.SetActive(false);
+        }
+
+        if (GameManager.clueC)
+        {
+            ClueC.SetActive(false);
+        }
+
 
     }
 
@@ -51,19 +61,7 @@ public class OuijaRoomManager : MonoBehaviour
         if (objectID == 1)
         {
             GameManager.ouijaLampCollected = true;
-        }
-
-        if (objectID == 2)
-        {
-            GameManager.ouijaCandleCollected = true;
-        }
-
-        if (objectID == 3)
-        {
-            GameManager.ouijaCloakCollected = true;
-        }
-
-        
+        } 
 
 
     }
@@ -87,4 +85,24 @@ public class OuijaRoomManager : MonoBehaviour
             ouijaBoardItem.SetActive(false);
         }
     }
+
+    public void ClueCollected(int clueID)
+    {
+        if (clueID == 15)
+        {
+            GameManager.clueO = true;
+        }
+
+        if (clueID == 9)
+        {
+            GameManager.clueI = true;
+        }
+
+        if (clueID == 3)
+        {
+            GameManager.clueC = true;
+        }
+
+    }
+
 }
