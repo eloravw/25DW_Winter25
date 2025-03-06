@@ -50,6 +50,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
     public AudioSource diamondAudio;
 
     public AudioClip candleBlownOutSE;
+    public AudioClip candleLitSE;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +66,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        diamondAudio.clip = candleLitSE;
 
         //first candle pressed (top candle)
         if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 0)
@@ -72,6 +74,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
             topCandle.GetComponent<SpriteRenderer>().sprite = topCandleSpriteLitOne;
             sequence += 1;
             nextCandle = topCandle;
+            diamondAudio.Play();
         }
         //wrong press
         if (Input.GetMouseButtonDown(0) && bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence == 1)
@@ -91,6 +94,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
             topLeftLine.SetActive(true);
 
             nextCandle = leftCandle;
+            diamondAudio.Play();
         }
 
         //right candle
@@ -104,6 +108,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
             topRightLine.SetActive(true);
 
             nextCandle = rightCandle;
+            diamondAudio.Play();
         }
 
         //_______________________
@@ -120,6 +125,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 bottomLeftLine.SetActive(true);
 
                 nextCandle = bottomCandle;
+                diamondAudio.Play();
             }
 
             if (rightCandle.GetComponent<CandleFunctionality>().clicked && sequence == 3)
@@ -130,6 +136,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 bottomRightLine.SetActive(true);
 
                 nextCandle = rightCandle;
+                diamondAudio.Play();
             }
 
             if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 4)
@@ -141,6 +148,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 completeDiamond = true;
 
                 nextCandle = topCandle;
+                diamondAudio.Play();
             }
 
         }
@@ -159,6 +167,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 bottomRightLine.SetActive(true);
 
                 nextCandle = bottomCandle;
+                diamondAudio.Play();
             }
 
             if (leftCandle.GetComponent<CandleFunctionality>().clicked && sequence == 3)
@@ -169,6 +178,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 bottomLeftLine.SetActive(true);
 
                 nextCandle = leftCandle;
+                diamondAudio.Play();
             }
 
             if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 4)
@@ -180,6 +190,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
                 completeDiamond = true;
 
                 nextCandle = topCandle;
+                diamondAudio.Play();
             }
 
         }

@@ -187,6 +187,9 @@ MonoBehaviour:
   bottomLeftLine: {fileID: 139461534}
   bottomRightLine: {fileID: 81931672}
   topRightLine: {fileID: 1722357674}
+  diamondAudio: {fileID: 46443325}
+  candleBlownOutSE: {fileID: 8300000, guid: 8a7d7765c3e07c24abfa1144d2362aca, type: 3}
+  candleLitSE: {fileID: 8300000, guid: e1aa0df3e6054c349a77f8a7d00d749f, type: 3}
 --- !u!82 &46443325
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2754,6 +2757,7 @@ MonoBehaviour:
   - {fileID: 1637866504}
   spikesAudio: {fileID: 1816167722}
   candleBlownOutSE: {fileID: 8300000, guid: 8a7d7765c3e07c24abfa1144d2362aca, type: 3}
+  candleLitSE: {fileID: 8300000, guid: e1aa0df3e6054c349a77f8a7d00d749f, type: 3}
 --- !u!82 &1816167722
 AudioSource:
   m_ObjectHideFlags: 0

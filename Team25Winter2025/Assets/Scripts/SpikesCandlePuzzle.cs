@@ -41,6 +41,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
     public AudioSource spikesAudio;
 
     public AudioClip candleBlownOutSE;
+    public AudioClip candleLitSE;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +55,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        spikesAudio.clip = candleLitSE;
         if (candles[0].GetComponent<CandleFunctionality>().clicked && sequence == 0)
         {
             candles[0].GetComponent<SpriteRenderer>().sprite = candle2Lit;
@@ -63,6 +64,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
             pathTwo = false;
 
             nextCandle = candles[0];
+
+            spikesAudio.Play();
         }
 
         if (candles[6].GetComponent<CandleFunctionality>().clicked && sequence == 0)
@@ -71,6 +74,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
             sequence += 1;
             pathTwo = true;
             pathOne = false;
+
+            spikesAudio.Play();
         }
 
         //_________________________
@@ -87,6 +92,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[0].SetActive(true);
 
                 nextCandle = candles[2];
+
+                spikesAudio.Play();
             }
 
             if (candles[1].GetComponent<CandleFunctionality>().clicked && sequence == 2)
@@ -97,6 +104,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[1].SetActive(true);
 
                 nextCandle = candles[1];
+
+                spikesAudio.Play();
             }
 
             if (candles[2].GetComponent<CandleFunctionality>().clicked && sequence == 3)
@@ -105,6 +114,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 nextCandle = candles[2];
+
+                spikesAudio.Play();
             }
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 4)
@@ -115,6 +126,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[2].SetActive(true);
 
                 nextCandle = candles[3];
+
+                spikesAudio.Play();
             }
 
             if (candles[4].GetComponent<CandleFunctionality>().clicked && sequence == 5)
@@ -125,6 +138,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[3].SetActive(true);
 
                 nextCandle = candles[4];
+
+                spikesAudio.Play();
             }
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 6)
@@ -133,6 +148,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 nextCandle = candles[3];
+
+                spikesAudio.Play();
             }
 
             if (candles[5].GetComponent<CandleFunctionality>().clicked && sequence == 7)
@@ -143,6 +160,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[4].SetActive(true);
 
                 nextCandle = candles[5];
+
+                spikesAudio.Play();
             }
 
             if (candles[7].GetComponent<CandleFunctionality>().clicked && sequence == 8)
@@ -153,6 +172,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[6].SetActive(true);
 
                 nextCandle = candles[7];
+
+                spikesAudio.Play();
             }
 
             if (candles[5].GetComponent<CandleFunctionality>().clicked && sequence == 9)
@@ -161,6 +182,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 nextCandle = candles[5];
+
+                spikesAudio.Play();
             }
 
             if (candles[6].GetComponent<CandleFunctionality>().clicked && sequence == 10)
@@ -173,6 +196,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 nextCandle = candles[6];
 
                 completeSpikes = true;
+
+                spikesAudio.Play();
             }
 
         }
@@ -190,6 +215,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[5].SetActive(true);
 
                 nextCandle = candles[5];
+
+                spikesAudio.Play();
             }
 
             if (candles[7].GetComponent<CandleFunctionality>().clicked && sequence == 2)
@@ -200,6 +227,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[6].SetActive(true);
 
                 nextCandle = candles[7];
+
+                spikesAudio.Play();
             }
 
             if (candles[5].GetComponent<CandleFunctionality>().clicked && sequence == 3)
@@ -208,6 +237,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 nextCandle = candles[5];
+
+                spikesAudio.Play();
             }
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 4)
@@ -218,6 +249,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[4].SetActive(true);
 
                 nextCandle = candles[3];
+
+                spikesAudio.Play();
             }
 
             if (candles[4].GetComponent<CandleFunctionality>().clicked && sequence == 5)
@@ -228,6 +261,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[3].SetActive(true);
 
                 nextCandle = candles[4];
+
+                spikesAudio.Play();
             }
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 6)
@@ -236,6 +271,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 nextCandle = candles[3];
+
+                spikesAudio.Play();
             }
 
             if (candles[2].GetComponent<CandleFunctionality>().clicked && sequence == 7)
@@ -246,6 +283,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[2].SetActive(true);
 
                 nextCandle = candles[2];
+
+                spikesAudio.Play();
             }
 
             if (candles[1].GetComponent<CandleFunctionality>().clicked && sequence == 8)
@@ -256,6 +295,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[1].SetActive(true);
 
                 nextCandle = candles[1];
+
+                spikesAudio.Play();
             }
 
             if (candles[2].GetComponent<CandleFunctionality>().clicked && sequence == 9)
@@ -264,6 +305,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 sequence += 1;
 
                 nextCandle = candles[2];
+
+                spikesAudio.Play();
             }
 
             if (candles[0].GetComponent<CandleFunctionality>().clicked && sequence == 10)
@@ -276,6 +319,8 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 nextCandle = candles[0];
 
                 completeSpikes = true;
+
+                spikesAudio.Play();
             }
 
         }
