@@ -55,6 +55,21 @@ public class SpikesCandlePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.solvedCandlePuzzle)
+        {
+            for (int i = 0; i < lines.Count; i++)
+            {
+                lines[i].SetActive(true);
+                candles[0].GetComponent<SpriteRenderer>().sprite = candle2Lit;
+                candles[1].GetComponent<SpriteRenderer>().sprite = candle1Lit;
+                candles[2].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
+                candles[3].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
+                candles[4].GetComponent<SpriteRenderer>().sprite = candle1Lit;
+                candles[5].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
+                candles[6].GetComponent<SpriteRenderer>().sprite = candle2Lit;
+            }
+        }
+
         spikesAudio.clip = candleLitSE;
         if (candles[0].GetComponent<CandleFunctionality>().clicked && sequence == 0)
         {

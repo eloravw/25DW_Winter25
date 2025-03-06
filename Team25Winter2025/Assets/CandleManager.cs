@@ -15,6 +15,11 @@ public class CandleManager : MonoBehaviour
     {
         if (diamond && spikes)
         {
+            GameManager.solvedCandlePuzzle = true;
+        }
+
+        if (GameManager.solvedCandlePuzzle)
+        {
             RevealRune();
         }
     }

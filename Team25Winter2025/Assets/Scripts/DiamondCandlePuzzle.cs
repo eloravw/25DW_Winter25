@@ -66,6 +66,18 @@ public class DiamondCandlePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.solvedCandlePuzzle)
+        {
+            topLeftLine.SetActive(true);
+            bottomLeftLine.SetActive(true);
+            bottomRightLine.SetActive(true);
+            topRightLine.SetActive(true);
+            topCandle.GetComponent<SpriteRenderer>().sprite = topCandleSpriteLitTwo;
+            leftCandle.GetComponent<SpriteRenderer>().sprite = leftCandleSpriteLit;
+            rightCandle.GetComponent<SpriteRenderer>().sprite = rightCandleSpriteLit;
+            bottomCandle.GetComponent<SpriteRenderer>().sprite = bottomCandleSpriteLit;
+        }
+
         diamondAudio.clip = candleLitSE;
 
         //first candle pressed (top candle)
