@@ -46,6 +46,11 @@ public class DiamondCandlePuzzle : MonoBehaviour
     //is this pattern complete?
     bool completeDiamond = false;
 
+    //sounds
+    public AudioSource diamondAudio;
+
+    public AudioClip candleBlownOutSE;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -205,6 +210,10 @@ public class DiamondCandlePuzzle : MonoBehaviour
 
             pathOne = false;
             pathTwo = false;
+
+            //play candle blown out sound
+            diamondAudio.clip = candleBlownOutSE;
+            diamondAudio.Play();
         }
     }
 

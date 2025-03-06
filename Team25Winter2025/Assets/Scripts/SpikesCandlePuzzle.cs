@@ -37,6 +37,11 @@ public class SpikesCandlePuzzle : MonoBehaviour
     //is this pattern complete?
     bool completeSpikes = false;
 
+    //sounds
+    public AudioSource spikesAudio;
+
+    public AudioClip candleBlownOutSE;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -307,6 +312,10 @@ public class SpikesCandlePuzzle : MonoBehaviour
             pathTwo = false;
 
             sequence = 0;
+
+            //play candle blown out sound
+            spikesAudio.clip = candleBlownOutSE;
+            spikesAudio.Play();
         }
     }
 }
