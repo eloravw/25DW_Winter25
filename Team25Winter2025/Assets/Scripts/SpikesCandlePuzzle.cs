@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpikesCandlePuzzle : MonoBehaviour
 {
+    public CandleManager manager;
+
     //CANDLES (candles are ordered from left to right, top to bottom (ie. candles[0] is the top leftmost candle, candle[1] is the bottom leftmost candle)
     public List<GameObject> candles;
 
@@ -267,6 +269,9 @@ public class SpikesCandlePuzzle : MonoBehaviour
         {
             Reset();
         }
+
+        if (completeSpikes == true) manager.CompletedSpikes();
+
     }
 
     private void Reset()

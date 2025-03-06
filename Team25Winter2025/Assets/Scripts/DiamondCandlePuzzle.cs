@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class DiamondCandlePuzzle : MonoBehaviour
 {
+    public CandleManager manager;
+
     //CANDLES
     public GameObject topCandle;
     public GameObject leftCandle;
@@ -169,6 +171,9 @@ public class DiamondCandlePuzzle : MonoBehaviour
         {
             Reset();
         }
+
+        if (completeDiamond == true) manager.CompletedDiamond();
+
     }
 
     private void Reset()
