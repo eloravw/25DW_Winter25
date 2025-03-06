@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Summon.unity
     guid: 9ded2c14391c6994e9691355b1817164
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/CandlePuzzle.unity
+    guid: 939288a2b5525804db745605e6ac9981
   m_configObjects: {}
