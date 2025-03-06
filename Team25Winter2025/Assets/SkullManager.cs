@@ -18,7 +18,6 @@ public class SkullManager : MonoBehaviour
     public GameObject dSkull;
 
     public List<GameObject> skullOrder;
-    public List<AudioClip> skullSounds;
 
     private bool correctAnswer = false;
 
@@ -47,17 +46,7 @@ public class SkullManager : MonoBehaviour
     {
         if (correctAnswer == false)
         {
-            AudioSource audio = GetComponent<AudioSource>();
-
             skullOrder.Add(activeSkull);
-            if (activeSkull == bSkull) audio.clip = skullSounds.ElementAt<AudioClip>(0);
-            if (activeSkull == fSharpSkull) audio.clip = skullSounds.ElementAt<AudioClip>(1);
-            if (activeSkull == fSkull) audio.clip = skullSounds.ElementAt<AudioClip>(2);
-            if (activeSkull == aSharpSkull) audio.clip = skullSounds.ElementAt<AudioClip>(3);
-            if (activeSkull == dSharpSkull) audio.clip = skullSounds.ElementAt<AudioClip>(4);
-            if (activeSkull == dSkull) audio.clip = skullSounds.ElementAt<AudioClip>(5);
-
-            audio.Play();
 
             if (skullOrder.Count > 7)
             {
