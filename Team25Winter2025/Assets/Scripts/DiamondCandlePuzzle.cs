@@ -14,6 +14,18 @@ public class DiamondCandlePuzzle : MonoBehaviour
     public GameObject bottomCandle;
     public GameObject rightCandle;
 
+    //CANDLE SPRITES
+    public Sprite topCandleSprite;
+    public Sprite leftCandleSprite;
+    public Sprite bottomCandleSprite;
+    public Sprite rightCandleSprite;
+
+    public Sprite topCandleSpriteLitOne;
+    public Sprite topCandleSpriteLitTwo;
+    public Sprite leftCandleSpriteLit;
+    public Sprite bottomCandleSpriteLit;
+    public Sprite rightCandleSpriteLit;
+
     //LINES
     public GameObject topLeftLine;
     public GameObject bottomLeftLine;
@@ -52,7 +64,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
         //first candle pressed (top candle)
         if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 0)
         {
-            topCandle.GetComponent<SpriteRenderer>().color = Color.magenta;
+            topCandle.GetComponent<SpriteRenderer>().sprite = topCandleSpriteLitOne;
             sequence += 1;
             nextCandle = topCandle;
         }
@@ -66,7 +78,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
         //left candle
         if (leftCandle.GetComponent<CandleFunctionality>().clicked && sequence == 1)
         {
-            leftCandle.GetComponent<SpriteRenderer>().color = Color.red;
+            leftCandle.GetComponent<SpriteRenderer>().sprite = leftCandleSpriteLit;
             sequence += 1;
             pathOne = true;
             pathTwo = false;
@@ -79,7 +91,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
         //right candle
         if (rightCandle.GetComponent<CandleFunctionality>().clicked && sequence == 1)
         {
-            rightCandle.GetComponent<SpriteRenderer>().color = Color.red;
+            rightCandle.GetComponent<SpriteRenderer>().sprite = rightCandleSpriteLit;
             sequence += 1;
             pathTwo = true;
             pathOne = false;
@@ -97,7 +109,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
         {
             if (bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence == 2)
             {
-                bottomCandle.GetComponent<SpriteRenderer>().color = Color.red;
+                bottomCandle.GetComponent<SpriteRenderer>().sprite = bottomCandleSpriteLit;
                 sequence += 1;
 
                 bottomLeftLine.SetActive(true);
@@ -107,7 +119,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
 
             if (rightCandle.GetComponent<CandleFunctionality>().clicked && sequence == 3)
             {
-                rightCandle.GetComponent<SpriteRenderer>().color = Color.red;
+                rightCandle.GetComponent<SpriteRenderer>().sprite = rightCandleSpriteLit;
                 sequence += 1;
 
                 bottomRightLine.SetActive(true);
@@ -117,7 +129,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
 
             if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 4)
             {
-                topCandle.GetComponent<SpriteRenderer>().color = Color.red;
+                topCandle.GetComponent<SpriteRenderer>().sprite = topCandleSpriteLitTwo;
                 sequence += 1;
 
                 topRightLine.SetActive(true);
@@ -136,7 +148,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
         {
             if (bottomCandle.GetComponent<CandleFunctionality>().clicked && sequence == 2)
             {
-                bottomCandle.GetComponent<SpriteRenderer>().color = Color.red;
+                bottomCandle.GetComponent<SpriteRenderer>().sprite = bottomCandleSpriteLit;
                 sequence += 1;
 
                 bottomRightLine.SetActive(true);
@@ -146,7 +158,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
 
             if (leftCandle.GetComponent<CandleFunctionality>().clicked && sequence == 3)
             {
-                leftCandle.GetComponent<SpriteRenderer>().color = Color.red;
+                leftCandle.GetComponent<SpriteRenderer>().sprite = leftCandleSpriteLit;
                 sequence += 1;
 
                 bottomLeftLine.SetActive(true);
@@ -156,7 +168,7 @@ public class DiamondCandlePuzzle : MonoBehaviour
 
             if (topCandle.GetComponent<CandleFunctionality>().clicked && sequence == 4)
             {
-                topCandle.GetComponent<SpriteRenderer>().color = Color.red;
+                topCandle.GetComponent<SpriteRenderer>().sprite = topCandleSpriteLitTwo;
                 sequence += 1;
 
                 topLeftLine.SetActive(true);
@@ -184,10 +196,10 @@ public class DiamondCandlePuzzle : MonoBehaviour
             bottomRightLine.SetActive(false);
             topRightLine.SetActive(false);
 
-            topCandle.GetComponent<SpriteRenderer>().color = new Color(150, 255, 255, 255);
-            leftCandle.GetComponent<SpriteRenderer>().color = Color.white;
-            bottomCandle.GetComponent<SpriteRenderer>().color = Color.white;
-            rightCandle.GetComponent<SpriteRenderer>().color = Color.white;
+            topCandle.GetComponent<SpriteRenderer>().sprite = topCandleSprite;
+            leftCandle.GetComponent<SpriteRenderer>().sprite = leftCandleSprite;
+            bottomCandle.GetComponent<SpriteRenderer>().sprite = bottomCandleSprite;
+            rightCandle.GetComponent<SpriteRenderer>().sprite = rightCandleSprite;
 
             sequence = 0;
 
