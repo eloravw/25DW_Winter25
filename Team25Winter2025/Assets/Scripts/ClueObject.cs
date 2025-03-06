@@ -50,6 +50,8 @@ public class ClueObject : MonoBehaviour
         var notifScript = notifPanel.GetComponent<notifPanelBehaviour>();
         notifScript.GetClue(glyph, translation);
 
+        Cursor.SetCursor(null, Vector2.zero, cursorMode);
+
         manager.SendMessage("ClueCollected", clueID, SendMessageOptions.DontRequireReceiver);
 
     }

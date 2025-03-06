@@ -9,6 +9,9 @@ public static class GameManager
     public static bool ouijaCloakCollected { get; set; }
     public static bool ouijaCandleCollected { get; set; }
 
+    //Music Room Puzzle Solved
+    public static bool solvedMusicRoom { get; set; }
+
     //Clues
 
     //Big Translation Clue

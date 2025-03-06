@@ -33,8 +33,14 @@ public class SkullManager : MonoBehaviour
              skullOrder.ElementAt(6) == aSharpSkull)
         {
             correctAnswer = true;
+            GameManager.solvedMusicRoom = true;
+        }
+
+        if (GameManager.solvedMusicRoom)
+        {
             RevealRune();
         }
+
     }
 
     public void OnLeftClick(GameObject activeSkull)

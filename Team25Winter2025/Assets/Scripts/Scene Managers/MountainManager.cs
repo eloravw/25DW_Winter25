@@ -8,6 +8,7 @@ public class MountainManager : MonoBehaviour
     public GameObject clueE;
     public GameObject clueB;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +38,9 @@ public class MountainManager : MonoBehaviour
 
         if (clueID == 2)
         {
-            GameManager.clueE = true;
+            GameManager.clueB = true;
         }
     }
+
 
 }

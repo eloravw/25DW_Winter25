@@ -17,4 +17,9 @@ public class notifPanelBehaviour : MonoBehaviour
 
     }
 
+    public void CloseClue()
+    {
+        gameObject.SetActive(false);
+    }
+
 }

@@ -305,6 +305,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1317426284037164501, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
   m_PrefabInstance: {fileID: 485843307220048945}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1549475246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7633897982186947142, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
+  m_PrefabInstance: {fileID: 485843307220048945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549475244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1dbe34ccf757d4793638b57643dae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1730346138
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +426,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1730346142}
     m_Modifications:
+    - target: {fileID: 659359827754802675, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1549475246}
+    - target: {fileID: 659359827754802675, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseClue
+      objectReference: {fileID: 0}
+    - target: {fileID: 659359827754802675, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: notifPanelBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 659359827754802675, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1317426284037164501, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
