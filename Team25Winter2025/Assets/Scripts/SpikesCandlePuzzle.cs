@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class SpikesCandlePuzzle : MonoBehaviour
 {
@@ -8,6 +9,16 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
     //CANDLES (candles are ordered from left to right, top to bottom (ie. candles[0] is the top leftmost candle, candle[1] is the bottom leftmost candle)
     public List<GameObject> candles;
+
+    //CANDLE SPRITES
+    public Sprite candle1Unlit;
+    public Sprite candle2Unlit;
+    public Sprite doubleCandleUnlit;
+
+    public Sprite candle1Lit;
+    public Sprite candle2Lit;
+    public Sprite doubleCandleLitOne;
+    public Sprite doubleCandleLitTwo;
 
     //LINES (ordered the same as candles - left to right, top to bottom)
     public List<GameObject> lines;
@@ -41,7 +52,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
         if (candles[0].GetComponent<CandleFunctionality>().clicked && sequence == 0)
         {
-            candles[0].GetComponent<SpriteRenderer>().color = Color.red;
+            candles[0].GetComponent<SpriteRenderer>().sprite = candle2Lit;
             sequence += 1;
             pathOne = true;
             pathTwo = false;
@@ -51,7 +62,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
         if (candles[6].GetComponent<CandleFunctionality>().clicked && sequence == 0)
         {
-            candles[6].GetComponent<SpriteRenderer>().color = Color.red;
+            candles[6].GetComponent<SpriteRenderer>().sprite = candle2Lit;
             sequence += 1;
             pathTwo = true;
             pathOne = false;
@@ -65,7 +76,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
         {
             if (candles[2].GetComponent<CandleFunctionality>().clicked && sequence == 1)
             {
-                candles[2].GetComponent<SpriteRenderer>().color = Color.magenta;
+                candles[2].GetComponent<SpriteRenderer>().sprite = doubleCandleLitOne;
                 sequence += 1;
 
                 lines[0].SetActive(true);
@@ -75,7 +86,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[1].GetComponent<CandleFunctionality>().clicked && sequence == 2)
             {
-                candles[1].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[1].GetComponent<SpriteRenderer>().sprite = candle1Lit;
                 sequence += 1;
 
                 lines[1].SetActive(true);
@@ -85,7 +96,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[2].GetComponent<CandleFunctionality>().clicked && sequence == 3)
             {
-                candles[2].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[2].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
                 sequence += 1;
 
                 nextCandle = candles[2];
@@ -93,7 +104,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 4)
             {
-                candles[3].GetComponent<SpriteRenderer>().color = Color.magenta;
+                candles[3].GetComponent<SpriteRenderer>().sprite = doubleCandleLitOne;
                 sequence += 1;
 
                 lines[2].SetActive(true);
@@ -103,7 +114,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[4].GetComponent<CandleFunctionality>().clicked && sequence == 5)
             {
-                candles[4].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[4].GetComponent<SpriteRenderer>().sprite = candle1Lit;
                 sequence += 1;
 
                 lines[3].SetActive(true);
@@ -113,7 +124,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 6)
             {
-                candles[3].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[3].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
                 sequence += 1;
 
                 nextCandle = candles[3];
@@ -121,7 +132,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[5].GetComponent<CandleFunctionality>().clicked && sequence == 7)
             {
-                candles[5].GetComponent<SpriteRenderer>().color = Color.magenta;
+                candles[5].GetComponent<SpriteRenderer>().sprite = doubleCandleLitOne;
                 sequence += 1;
 
                 lines[4].SetActive(true);
@@ -131,7 +142,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[7].GetComponent<CandleFunctionality>().clicked && sequence == 8)
             {
-                candles[7].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[7].GetComponent<SpriteRenderer>().sprite = candle1Lit;
                 sequence += 1;
 
                 lines[6].SetActive(true);
@@ -141,7 +152,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[5].GetComponent<CandleFunctionality>().clicked && sequence == 9)
             {
-                candles[5].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[5].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
                 sequence += 1;
 
                 nextCandle = candles[5];
@@ -149,7 +160,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[6].GetComponent<CandleFunctionality>().clicked && sequence == 10)
             {
-                candles[6].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[6].GetComponent<SpriteRenderer>().sprite = candle2Lit;
                 sequence += 1;
 
                 lines[5].SetActive(true);
@@ -168,7 +179,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
         {
             if (candles[5].GetComponent<CandleFunctionality>().clicked && sequence == 1)
             {
-                candles[5].GetComponent<SpriteRenderer>().color = Color.magenta;
+                candles[5].GetComponent<SpriteRenderer>().sprite = doubleCandleLitOne;
                 sequence += 1;
 
                 lines[5].SetActive(true);
@@ -178,7 +189,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[7].GetComponent<CandleFunctionality>().clicked && sequence == 2)
             {
-                candles[7].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[7].GetComponent<SpriteRenderer>().sprite = candle1Lit;
                 sequence += 1;
 
                 lines[6].SetActive(true);
@@ -188,7 +199,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[5].GetComponent<CandleFunctionality>().clicked && sequence == 3)
             {
-                candles[5].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[5].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
                 sequence += 1;
 
                 nextCandle = candles[5];
@@ -196,7 +207,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 4)
             {
-                candles[3].GetComponent<SpriteRenderer>().color = Color.magenta;
+                candles[3].GetComponent<SpriteRenderer>().sprite = doubleCandleLitOne;
                 sequence += 1;
 
                 lines[4].SetActive(true);
@@ -206,7 +217,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[4].GetComponent<CandleFunctionality>().clicked && sequence == 5)
             {
-                candles[4].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[4].GetComponent<SpriteRenderer>().sprite = candle1Lit;
                 sequence += 1;
 
                 lines[3].SetActive(true);
@@ -216,7 +227,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[3].GetComponent<CandleFunctionality>().clicked && sequence == 6)
             {
-                candles[3].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[3].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
                 sequence += 1;
 
                 nextCandle = candles[3];
@@ -224,7 +235,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[2].GetComponent<CandleFunctionality>().clicked && sequence == 7)
             {
-                candles[2].GetComponent<SpriteRenderer>().color = Color.magenta;
+                candles[2].GetComponent<SpriteRenderer>().sprite = doubleCandleLitOne;
                 sequence += 1;
 
                 lines[2].SetActive(true);
@@ -234,7 +245,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[1].GetComponent<CandleFunctionality>().clicked && sequence == 8)
             {
-                candles[1].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[1].GetComponent<SpriteRenderer>().sprite = candle1Lit;
                 sequence += 1;
 
                 lines[1].SetActive(true);
@@ -244,7 +255,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[2].GetComponent<CandleFunctionality>().clicked && sequence == 9)
             {
-                candles[2].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[2].GetComponent<SpriteRenderer>().sprite = doubleCandleLitTwo;
                 sequence += 1;
 
                 nextCandle = candles[2];
@@ -252,7 +263,7 @@ public class SpikesCandlePuzzle : MonoBehaviour
 
             if (candles[0].GetComponent<CandleFunctionality>().clicked && sequence == 10)
             {
-                candles[0].GetComponent<SpriteRenderer>().color = Color.red;
+                candles[0].GetComponent<SpriteRenderer>().sprite = candle2Lit;
                 sequence += 1;
 
                 lines[0].SetActive(true);
@@ -283,10 +294,14 @@ public class SpikesCandlePuzzle : MonoBehaviour
                 lines[i].SetActive(false);
             }
 
-            for (int i = 0; i < candles.Count; i++)
-            {
-                candles[i].GetComponent<SpriteRenderer>().color = Color.white;
-            }
+            candles[0].GetComponent<SpriteRenderer>().sprite = candle2Unlit;
+            candles[1].GetComponent<SpriteRenderer>().sprite = candle1Unlit;
+            candles[2].GetComponent<SpriteRenderer>().sprite = doubleCandleUnlit;
+            candles[3].GetComponent<SpriteRenderer>().sprite = doubleCandleUnlit;
+            candles[4].GetComponent<SpriteRenderer>().sprite = candle1Unlit;
+            candles[5].GetComponent<SpriteRenderer>().sprite = doubleCandleUnlit;
+            candles[6].GetComponent<SpriteRenderer>().sprite = candle2Unlit;
+            candles[7].GetComponent<SpriteRenderer>().sprite = candle1Unlit;
 
             pathOne = false;
             pathTwo = false;
