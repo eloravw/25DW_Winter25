@@ -298,11 +298,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6345734908389446326, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: sceneName
-      value: Yard
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 5236967661508385750, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: m_Name
-      value: ToYard
+      value: ToCave
       objectReference: {fileID: 0}
     - target: {fileID: 6755410706165140313, guid: 0656bd4971d91ee4fb44bc4c520847c3, type: 3}
       propertyPath: m_LocalPosition.x
