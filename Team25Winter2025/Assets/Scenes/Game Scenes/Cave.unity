@@ -372,6 +372,10 @@ PrefabInstance:
       propertyPath: translation
       value: T
       objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: efead7e8727588e4eb10ac79f7d3ab14, type: 3}
     - target: {fileID: 8281467038334168573, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
       propertyPath: m_Name
       value: ClueT
@@ -509,6 +513,10 @@ PrefabInstance:
       propertyPath: translation
       value: N
       objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: efead7e8727588e4eb10ac79f7d3ab14, type: 3}
     - target: {fileID: 8281467038334168573, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
       propertyPath: m_Name
       value: ClueN
@@ -743,7 +751,7 @@ PrefabInstance:
     - target: {fileID: 42996014887243133, guid: ca1f84f6cc50e0b41943a5f09a997e9f, type: 3}
       propertyPath: cursorTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 98228ed3b93435a41b08fe8558176c75, type: 3}
+      objectReference: {fileID: 2800000, guid: efead7e8727588e4eb10ac79f7d3ab14, type: 3}
     - target: {fileID: 1854970623449276043, guid: ca1f84f6cc50e0b41943a5f09a997e9f, type: 3}
       propertyPath: m_Name
       value: CandlePiece

@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: translation
       value: G
       objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: efead7e8727588e4eb10ac79f7d3ab14, type: 3}
     - target: {fileID: 8281467038334168573, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
       propertyPath: m_Name
       value: ClueG
@@ -862,11 +866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317426284037164501, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -524.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1317426284037164501, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1317426284037164501, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -886,7 +890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3080283854125136408, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -909,6 +913,10 @@ PrefabInstance:
       propertyPath: puzzleID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 42996014887243133, guid: ca1f84f6cc50e0b41943a5f09a997e9f, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: efead7e8727588e4eb10ac79f7d3ab14, type: 3}
     - target: {fileID: 1854970623449276043, guid: ca1f84f6cc50e0b41943a5f09a997e9f, type: 3}
       propertyPath: m_Name
       value: Cloak
@@ -1087,6 +1095,10 @@ PrefabInstance:
       propertyPath: translation
       value: U
       objectReference: {fileID: 0}
+    - target: {fileID: 4764100437817149720, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: efead7e8727588e4eb10ac79f7d3ab14, type: 3}
     - target: {fileID: 6129322991895702944, guid: dc60415ca2a64754ab0a310e0d981985, type: 3}
       propertyPath: m_Radius
       value: 1

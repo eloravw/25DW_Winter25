@@ -17,11 +17,18 @@ public class OuijaRoomManager : MonoBehaviour
     public GameObject ClueI;
     public GameObject ClueC;
 
+    private bool showingOuija;
 
     private void Start()
     {
-
-        ouijaBoardItem.SetActive(false);
+        if (GameManager.ouijaCandleCollected && GameManager.ouijaCloakCollected && GameManager.ouijaLampCollected)
+        {
+            PuzzleComplete();
+        }
+        else
+        {
+            ouijaBoardItem.SetActive(false);
+        }
 
     }
 
@@ -30,11 +37,6 @@ public class OuijaRoomManager : MonoBehaviour
         if (GameManager.ouijaLampCollected)
         {
             lampP1.SetActive(false);
-        }
-
-        if (GameManager.ouijaCandleCollected && GameManager.ouijaCloakCollected && GameManager.ouijaLampCollected)
-        {
-            PuzzleComplete();
         }
 
         if (GameManager.clueO)
