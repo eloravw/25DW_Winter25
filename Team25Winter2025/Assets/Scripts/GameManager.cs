@@ -36,8 +36,8 @@ public static class GameManager
     public static bool clueL { get; set; }
 
     //Entrance
-    public static bool clueM { get; set; }
-    public static bool clueP { get; set; }
+    public static bool clueU { get; set; }
+    public static bool clueG { get; set; }
 
     //Library
     public static bool clueN { get; set; }
