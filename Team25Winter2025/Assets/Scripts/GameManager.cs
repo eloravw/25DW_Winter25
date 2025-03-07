@@ -23,44 +23,24 @@ public static class GameManager
     //Big Translation Clue
     public static bool TranslationClue { get; set; }
 
-    //Seance Room 1 Clues
+    //Seance Room Clues
     public static bool clueC { get; set; }
-    public static bool clueF { get; set; }
-
-    //Seance Room 2 Clues
+    public static bool clueI { get; set; }
     public static bool clueO { get; set; }
-    public static bool clueX { get; set; }
 
     //Music Room Clues
-    public static bool clueK { get; set; }
-    public static bool clueL { get; set; }
+    public static bool clueE { get; set; }
+    public static bool clueB { get; set; }
 
     //Entrance
     public static bool clueU { get; set; }
     public static bool clueG { get; set; }
 
     //Library
-    public static bool clueN { get; set; }
-    public static bool clueR { get; set; }
-
-    //Yard
-    public static bool clueV { get; set; }
-    public static bool clueS { get; set; }
-
-    //Beach
-    public static bool clueI { get; set; }
-    public static bool clueA { get; set; }
-    public static bool clueJ { get; set; }
+    public static bool clueW { get; set; }
 
     //Cave
-    public static bool clueZ { get; set; }
+    public static bool clueN { get; set; }
     public static bool clueT { get; set; }
-    public static bool clueD { get; set; }
-
-    //Mountain
-    public static bool clueE { get; set; }
-    public static bool clueB { get; set; }
-
-
 
 }
