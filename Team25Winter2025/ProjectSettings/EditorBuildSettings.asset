@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/PaintingPuzzle.unity
     guid: b8861c1dd6a82a140bff0fcbd293b92d
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/StartScene.unity
+    guid: 413c5b32f8d42c24ca1b7038c75d2803
   m_configObjects: {}
