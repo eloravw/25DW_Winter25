@@ -14,7 +14,7 @@ public class PaintingManager : MonoBehaviour
     public GameObject glyphFound;
 
     [Header("Text Clue")]
-    public GameObject symbolText;
+    public TextMeshProUGUI symbolText;
 
     private bool foundStar;
     private bool foundGlyph;
@@ -25,7 +25,6 @@ public class PaintingManager : MonoBehaviour
 
         starFound.SetActive(false);
         glyphFound.SetActive(false);
-        symbolText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,7 +41,7 @@ public class PaintingManager : MonoBehaviour
 
             starFound.SetActive(true);
             glyphFound.SetActive(true);
-            symbolText.SetActive(true);
+            symbolText.alpha += 1 * Time.deltaTime;
         }
 
     }
