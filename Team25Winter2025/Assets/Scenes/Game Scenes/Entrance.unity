@@ -884,6 +884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NotifPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3080283854125136408, guid: eb525013da6a01641a433fbe1c3a548f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1226,8 +1230,8 @@ Transform:
   m_GameObject: {fileID: 1926920289}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.65, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalPosition: {x: -0.02, y: 0.699, z: 0}
+  m_LocalScale: {x: 0.75623786, y: 0.7560119, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
